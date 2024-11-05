@@ -41,7 +41,7 @@ To use the tool, follow these steps:
 
 1. **Install Dependencies**: Ensure you have Python installed, then install the required libraries:
    ```bash
-   pip install langchain presidio-analyzer presidio-anonymizer faker
+   pip install langchain==0.2.11 presidio-analyzer==2.2.351 presidio-anonymizer==2.2.351 faker==20.1.0
    
    
    
