@@ -1,4 +1,4 @@
-from pseudonymizer import CustomAnonymizer
+from .tools.pseudonymizer import CustomAnonymizer
 
 def load_document_from_file(file_path):
     """Function to load document content from a text file"""
