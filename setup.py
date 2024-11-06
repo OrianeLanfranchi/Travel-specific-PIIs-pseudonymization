@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     
 setup(
     name='travel_pii_anonymisation',
-    version='0.1.0',
+    version='0.1.3',
     author='Ilias',
     author_email='ilias.driouich@amadeus.com',
     description='A package for pseudonymizing travel-specific PII data',
@@ -24,7 +24,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'travel_pii=tspii:main',
+            'travel_pii=tspii.tspii:main',
     ],
     },
     python_requires='>=3.6',
