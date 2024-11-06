@@ -1,6 +1,6 @@
 import sys
 from pathlib import Path
-src_path = Path(__file__).parent.parent / 'src/tspii/tools'
+src_path = Path(__file__).parent.parent / 'src/tspii/tools/'
 sys.path.append(str(src_path))
 import unittest
 from pseudonymizer import CustomAnonymizer

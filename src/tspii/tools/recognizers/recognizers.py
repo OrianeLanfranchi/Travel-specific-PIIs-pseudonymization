@@ -1,4 +1,5 @@
-# recognizers.py
+from langchain_experimental.data_anonymizer import PresidioReversibleAnonymizer
+from generators import create_fake_data_generators
 from presidio_analyzer import Pattern, PatternRecognizer
 
 def create_recognizers():
@@ -44,5 +45,3 @@ def create_recognizers():
 
     return recognizers
 
-# ----------
-# Purpose: This file contains all the regular expressions and recognizers required for detecting different aviation-related entities like PNR, aircraft types, and airport codes.
