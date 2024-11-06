@@ -48,6 +48,9 @@ If you choose 1, you need to specify a file path. (you can use sample.txt in thi
 ```
 
   
+## Minimum Requirements:
+
+Ensure you have at least 1 GB of free storage and a stable internet connection, as this software requires downloading the `en-core-web` package which is approximately 500 MB.
 
    
 ## Contributing
