@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     
 setup(
     name='travel_pii_anonymisation',
-    version='0.2.2',
+    version='0.2.3',
     author='Ilias',
     author_email='ilias.driouich@amadeus.com',
     description='A package for pseudonymizing travel-specific PII data',
@@ -17,7 +17,11 @@ setup(
     install_requires=[
         'pandas>=1.1.0',
         'numpy>=1.19.0',
-        'faker>=8.0.0',
+        'langchain==0.2.11',
+        'langchain_experimental==0.0.42',
+        'presidio-analyzer==2.2.351',
+        'presidio-anonymizer==2.2.351',
+        'faker==20.1.0',
     ],
     tests_require=[
         'pytest>=6.0.0',
