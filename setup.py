@@ -24,7 +24,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'travel_pii=tspii:main',
+            'travel_pii=tspii.tspii:main',
     ],
     },
     python_requires='>=3.6',
