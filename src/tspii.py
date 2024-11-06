@@ -1,4 +1,3 @@
-# main.py
 from pseudonymizer import CustomAnonymizer
 
 def load_document_from_file(file_path):
@@ -16,7 +15,7 @@ def save_pseudonymized_content_to_file(file_path, content):
     with open(file_path, "w") as file:
         file.write(content)
     print(f"pseudonymized content saved to {file_path}")
-
+    
 def run_pseudonymization_process(document_content):
     """Function to handle the pseudonymization process"""
     # Initialize custom pseudonymizer
@@ -39,7 +38,7 @@ def run_pseudonymization_process(document_content):
 
     return pseudonymized_content
 
-if __name__ == "__main__":
+def main():
     # Sample document for testing
     sample_document = """Date: August 12, 2023
     To: Delta Airlines Customer Service
@@ -94,3 +93,6 @@ if __name__ == "__main__":
             save_pseudonymized_content_to_file(save_path, pseudonymized_content)
     else:
         print("Invalid choice. Please run the program again and select a valid option.")
+        
+if __name__ == "__main__":
+  main()
