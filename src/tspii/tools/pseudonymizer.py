@@ -1,6 +1,6 @@
 # anonymizer.py
 from langchain_experimental.data_anonymizer import PresidioReversibleAnonymizer
-from recognizers import create_recognizers
+from .recognizers.recognizers import create_recognizers
 from generators import create_fake_data_generators
 
 class CustomAnonymizer:
