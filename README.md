@@ -39,14 +39,13 @@ The project is organized into several Python modules for better scalability and 
 
 To use the tool, follow these steps:
 
-
-   ```bash
+ ```bash
    pip install travel-pii-anonymisation
 
    travel_pii
+```
    
-   
-   
+
    
 ## Contributing
 
