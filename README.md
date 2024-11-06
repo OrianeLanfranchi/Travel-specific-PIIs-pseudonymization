@@ -25,7 +25,7 @@ The project is organized into several Python modules for better scalability and 
 
 ### Files Overview:
 
-1. **`main.py`**: This is the main entry point for the project. It handles document input, pseudonymization execution, and saving the pseudonymized document to a file.
+1. **`tspii.py`**: This is the main entry point for the project. It handles document input, pseudonymization execution, and saving the pseudonymized document to a file.
    
 2. **`pseudonymizer.py`**: Contains the core class `CustomPseudonymizer`, which performs the pseudonymization process and stores the depseudonymization mappings. It integrates with custom recognizers and synthetic data generators.
 
@@ -33,7 +33,7 @@ The project is organized into several Python modules for better scalability and 
 
 4. **`generators.py`**: Implements custom fake data generators that create realistic synthetic data for aviation-related entities (e.g., generating fake PNRs or e-tickets).
 
-5. **`test_pseudonymizer.py`**: Contains unit tests for the CustomPseudonymizer class, validating the accuracy of the pseudonymization process and ensuring that sensitive information is properly anonymized while maintaining a correct mapping for potential deanonymization.
+5. tests: Contains unit tests for the CustomPseudonymizer class, validating the accuracy of the pseudonymization process and ensuring that sensitive information is properly anonymized while maintaining a correct mapping for potential deanonymization.
 
 ## Usage
 
