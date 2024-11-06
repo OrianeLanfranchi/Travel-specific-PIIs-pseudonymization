@@ -42,7 +42,7 @@ To use the tool, follow these steps:
    travel_pii
 
 Would you like to (1) Load a document from a file or (2) Use the sample document? Enter 1 or 2:
-If you choose 1, you need to specify a file path.   
+If you choose 1, you need to specify a file path. (you can use sample.txt in this repository)
 
 
 ```
