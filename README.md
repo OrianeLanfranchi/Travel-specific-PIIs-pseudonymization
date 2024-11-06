@@ -18,9 +18,6 @@
 
 - **Reversible Pseudonymization**: The tool provides mapping between the original and pseudonymized data, allowing for reversible pseudonymization when required (useful for testing or regulatory purposes).
 
-## Project Structure
-
-The project is organized into several Python modules for better scalability and maintenance:
 
 
 ### Files Overview:
@@ -43,8 +40,14 @@ To use the tool, follow these steps:
    pip install travel-pii-anonymisation
 
    travel_pii
+
+Would you like to (1) Load a document from a file or (2) Use the sample document? Enter 1 or 2:
+If you choose 1, you need to specify a file path.   
+
+
 ```
-   
+
+  
 
    
 ## Contributing
