@@ -1,7 +1,7 @@
 
 import sys
 from pathlib import Path
-src_path = Path(__file__).parent.parent / 'src'
+src_path = Path(__file__).parent.parent / 'src/tspii'
 sys.path.append(str(src_path))
 
 import unittest
