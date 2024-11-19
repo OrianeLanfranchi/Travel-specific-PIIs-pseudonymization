@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
     
 setup(
     name='travel_pii_anonymisation',
-    version='0.2.4',
+    version='0.2.5',
     author='Ilias',
     author_email='ilias.driouich@amadeus.com',
     description='A package for pseudonymizing travel-specific PII data',
