@@ -1,4 +1,4 @@
-from .tools.pseudonymizer import CustomAnonymizer
+from tools.pseudonymizer import CustomAnonymizer
 
 def load_document_from_file(file_path):
     """Function to load document content from a text file"""
@@ -23,34 +23,52 @@ def run_pseudonymization_process(document_content):
     
     # Add custom recognizers and fake data generators
     pseudonymizer.add_custom_recognizers()
-    pseudonymizer.add_custom_fake_data_generators()
+    # pseudonymizer.add_custom_fake_data_generators() # <- This is the line that anonymises with fake informations; remove it to have placeholders instead 
 
     # pseudonymize the document
     print("\nOriginal Document:")
     print(document_content)
 
     pseudonymized_content = pseudonymizer.anonymize_document(document_content)
-    print("\npseudonymized Document:")
-    print(pseudonymized_content)
+    print("\nAnonymised Document:")
+    print(pseudonymized_content) # Anonymised content 
 
-    print("\nDepseudonymization Mapping:")
-    print(pseudonymizer.deanonymize_mapping())
+    print("\nDeanonymised Mapping:")
+    print(pseudonymizer.deanonymize_mapping()) # Map to anonymised content - original content
+
+    print("\nSaving mapping...")
+    pseudonymizer.save_deanonymize_mapping("deanonymize_mapping.yaml")
 
     return pseudonymized_content
+
+def deanonymise_text():
+    pseudonymizer = CustomAnonymizer(add_default_faker_operators=False)
+    pseudonymizer.anonymizer.load_deanonymizer_mapping("deanonymize_mapping.yaml")
+    document_content = load_document_from_file("pseudonymized_document.txt")
+    if document_content:
+        print("\nAnonymised document content:")
+        print(document_content)
+        deanonymisedContent = pseudonymizer.anonymizer.deanonymize(document_content)
+        print("\nDeanonymised document content:")
+        print(deanonymisedContent)
+    else:
+        print("Oupsi")
+    
 
 def main():
     # Sample document for testing
     sample_document = """Date: August 12, 2023
     To: Delta Airlines Customer Service
 
-    Subject: Complaint Regarding Flight disruption and request to compensate 
+    Subject: Complaint Regarding Flight disruption and request to compensate. 0495676898
 
     Dear Delta Airlines,
 
     I am writing to express my dissatisfaction with the disruption of flight DL1234 on August 10, 2023,. The disruption was announced just two hours before the scheduled departure time, leaving many passengers stranded.
 
     Below are the relevant details for my booking:
-    - PNR: RFAKP8 - E-ticket: 006-9876543210
+    - PNR:     RFAKP8
+    - E-ticket: 006-9876543210
     - Passenger Name: John Doe
     - Flight Number: DL1234
     - Aircraft Registration: N835DN (Boeing 737-900ER)
@@ -64,35 +82,36 @@ def main():
     - Phone: +1 555-123-4567
     - Email: johndoe@businessmail.com
 
-    Thank you for your prompt attention to this matter.
+    Thank you for your prompt attention to this matter. You can join me calling the 0612345678. 
 
     Sincerely,
     John Doe
     Frequent Flyer Number: 123456789
 
-    """
+    # """
 
+    deanonymise_text()
 
-    # Option for user to either load document from file or use sample
-    print("Welcome to the Document pseudonymizer.")
-    choice = input("Would you like to (1) Load a document from a file or (2) Use the sample document? Enter 1 or 2: ")
+    # # Option for user to either load document from file or use sample
+    # print("Welcome to the Document pseudonymizer.")
+    # choice = input("Would you like to (1) Load a document from a file or (2) Use the sample document? Enter 1 or 2: ")
 
-    if choice == "1":
-        file_path = input("Enter the path to the text file: ")
-        document_content = load_document_from_file(file_path)
-        if document_content:
-            pseudonymized_content = run_pseudonymization_process(document_content)
-            save_path = input("Enter the path to save the pseudonymized content (e.g., pseudonymized_document.txt): ")
-            save_pseudonymized_content_to_file(save_path, pseudonymized_content)
-    elif choice == "2":
-        # Run the process on the sample document
-        pseudonymized_content = run_pseudonymization_process(sample_document)
-        save_option = input("Would you like to save the pseudonymized document? (y/n): ")
-        if save_option.lower() == "y":
-            save_path = input("Enter the path to save the pseudonymized content (e.g., pseudonymized_document.txt): ")
-            save_pseudonymized_content_to_file(save_path, pseudonymized_content)
-    else:
-        print("Invalid choice. Please run the program again and select a valid option.")
+    # if choice == "1":
+    #     file_path = input("Enter the path to the text file: ")
+    #     document_content = load_document_from_file(file_path)
+    #     if document_content:
+    #         pseudonymized_content = run_pseudonymization_process(document_content)
+    #         save_path = input("Enter the path to save the pseudonymized content (e.g., pseudonymized_document.txt): ")
+    #         save_pseudonymized_content_to_file(save_path, pseudonymized_content)
+    # elif choice == "2":
+    #     # Run the process on the sample document
+    #     pseudonymized_content = run_pseudonymization_process(sample_document)
+    #     save_option = input("Would you like to save the pseudonymized document? (y/n): ")
+    #     if save_option.lower() == "y":
+    #         save_path = input("Enter the path to save the pseudonymized content (e.g., pseudonymized_document.txt): ")
+    #         save_pseudonymized_content_to_file(save_path, pseudonymized_content)
+    # else:
+    #     print("Invalid choice. Please run the program again and select a valid option.")
         
 if __name__ == "__main__":
   main()

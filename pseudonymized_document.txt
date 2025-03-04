@@ -1,0 +1,29 @@
+Date: <DATE_TIME>, <DATE_TIME_2>
+    To: Delta Airlines Customer Service
+
+    Subject: Complaint Regarding Flight disruption and request to compensate. <PHONE_NUMBER>
+
+    Dear Delta Airlines,
+
+    I am writing to express my dissatisfaction with the disruption of flight <PNR> on August 10, <DATE_TIME_2>,. The disruption was announced <DATE_TIME_4> before the scheduled departure time, leaving many passengers stranded.
+
+    Below are the relevant details for my booking:
+    - PNR:     <PNR_2>
+    - E-ticket: <E-TICKET>
+    - Passenger Name: <PERSON> Number: <PNR>
+    - Aircraft <US_DRIVER_LICENSE>: N835DN (Boeing 737-900ER)
+    - ICAO Aircraft Type: <DATE_TIME_5> Airport: <PERSON_2> (<PERSON_3>)
+
+
+    I had important business meetings scheduled upon my arrival, and this disruption caused significant inconvenience. I would like to request <US_DRIVER_LICENSE_2> as per EU Regulation 261/2004 since I was rebooked on flight <PNR_3> <DATE_TIME_6>, arriving over <DATE_TIME_7> later than originally planned.
+
+    Please treat this complaint with urgency and respect for my privacy. You may reach me at my contact details below for any updates:
+    - Phone: +1 <PHONE_NUMBER_2>
+    - Email: <EMAIL_ADDRESS>
+
+    Thank you for your prompt attention to this matter. You can join me calling the <PHONE_NUMBER_3>. 
+
+    Sincerely,
+    <PERSON_4>Frequent Flyer Number: <DATE_TIME_8>
+
+    

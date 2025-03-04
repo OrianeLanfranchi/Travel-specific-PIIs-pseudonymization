@@ -7,7 +7,7 @@ def create_recognizers():
     recognizers = []
 
     # PNR Recognizer
-    pnr_pattern = Pattern(name="pnr_pattern", regex="[A-Z0-9]{5}\d{1}", score=1)  # Adjusted score
+    pnr_pattern = Pattern(name="pnr_pattern", regex=r"[A-Z0-9]{5}\d{1}", score=1)  # Adjusted score
     recognizers.append(PatternRecognizer(supported_entity="PNR", patterns=[pnr_pattern], context=["PNR", "PNRs", "PNR codes"]))
 
     # E-TICKET Recognizer
@@ -145,5 +145,8 @@ class CustomAnonymizer:
 
     def deanonymize_mapping(self):
         return self.anonymizer.deanonymizer_mapping
+    
+    def save_deanonymize_mapping(self, file_path):
+        self.anonymizer.save_deanonymizer_mapping(file_path)
 
 

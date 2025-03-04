@@ -1,0 +1,29 @@
+DATE_TIME:
+  <DATE_TIME>: August 12
+  <DATE_TIME_2>: '2023'
+  <DATE_TIME_3>: August 10, 2023
+  <DATE_TIME_4>: just two hours
+  <DATE_TIME_5>: "B739\n    - Departure"
+  <DATE_TIME_6>: the next day
+  <DATE_TIME_7>: 24 hours
+  <DATE_TIME_8>: '123456789'
+E-TICKET:
+  <E-TICKET>: 006-9876543210
+EMAIL_ADDRESS:
+  <EMAIL_ADDRESS>: johndoe@businessmail.com
+PERSON:
+  <PERSON>: "John Doe\n    - Flight"
+  <PERSON_2>: JFK
+  <PERSON_3>: John F. Kennedy International Airport
+  <PERSON_4>: "John Doe\n    "
+PHONE_NUMBER:
+  <PHONE_NUMBER>: 0495676898
+  <PHONE_NUMBER_2>: 555-123-4567
+  <PHONE_NUMBER_3>: 0612345678
+PNR:
+  <PNR>: DL1234
+  <PNR_2>: RFAKP8
+  <PNR_3>: DL5678
+US_DRIVER_LICENSE:
+  <US_DRIVER_LICENSE>: Registration
+  <US_DRIVER_LICENSE_2>: compensation
