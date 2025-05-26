@@ -36,10 +36,10 @@ jobs:
         python -m pip install --upgrade pip
         pip install build twine pyyaml -r requirements.txt
       
-#    - name: Run tests
-#      run: |
-#        cd tests
-#        python -m unittest
+    - name: Run tests
+      run: |
+  #      cd tests
+        python test.py
 
     - name: Build package
       run: python -m build
