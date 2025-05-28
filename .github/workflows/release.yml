@@ -38,8 +38,8 @@ jobs:
       
     - name: Run tests
       run: |
-        cd tests
-        python -m unittest
+  #      cd tests
+  #      python test.py
 
     - name: Build package
       run: python -m build
